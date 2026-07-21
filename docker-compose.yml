@@ -1,0 +1,31 @@
+version: '3.8'  # Specify the Compose file format version
+services:
+ 
+  # postgres:
+  #   image: postgres:13  # Use the official PostgreSQL image, version 13
+  #   container_name: postgres-db
+  #   restart: always  # Automatically restart the container if it crashes
+  #   environment:
+  #     # Set up default PostgreSQL credentials and database name.
+  #     POSTGRES_USER: teddy
+  #     POSTGRES_PASSWORD: Teddysaigondepzai170805!
+  #     POSTGRES_DB: code-review-platform
+  #   ports:
+  #     - "5432:5432"  # Map container port 5432 to host port 5432
+  #   volumes:
+  #     # Persist PostgreSQL data on the host using a named volume.
+  #     - postgres_data:/var/lib/postgresql/data
+  code-review-platform-server:
+    build: .
+    container_name: code_review_platform_server
+    ports: 
+      - "8004:8003"
+    volumes:
+      - ./app:/code/app
+    environment:
+      - ./app:/code/.env
+    restart: always
+
+# Define named volumes for data persistence.
+# volumes:
+#   postgres_data:
