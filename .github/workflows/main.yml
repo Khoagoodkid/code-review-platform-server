@@ -1,4 +1,4 @@
-name: Deploy Code Review platform
+name: Deploy Code Review Platform
 
 on:
   push:
