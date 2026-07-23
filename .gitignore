@@ -1,2 +1,11 @@
+.git
+.github
+__pycache__
+*.pyc
 .venv
+venv
 .env
+.pytest_cache
+.mypy_cache
+.idea
+.vscode
